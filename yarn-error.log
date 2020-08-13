@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/yuhanwu/.nvm/versions/node/v12.6.0/bin/node /usr/local/Cellar/yarn/1.7.0/libexec/bin/yarn.js add Morgan
+  /Users/yuhanwu/.nvm/versions/node/v12.6.0/bin/node /usr/local/Cellar/yarn/1.7.0/libexec/bin/yarn.js add hemlmet
 
 PATH: 
   /Users/yuhanwu/.nvm/versions/node/v12.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kian.zhu/Library/Android/sdk/build-tools:/Users/kian.zhu/Library/Android/sdk/platform-tools:/Users/kian.zhu/Library/Android/sdk/tools:/Users/kian.zhu/Library/Android/sdk/build-tools/28.0.3:/usr/local/go/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.npmjs.org/Morgan: Not found
+  Error: https://registry.npmjs.org/hemlmet: Not found
       at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:65656:18)
       at Request.self.callback (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:134675:22)
       at Request.emit (events.js:203:13)
@@ -42,6 +42,7 @@ npm manifest:
       "cors": "^2.8.4",
       "express": "^4.16.3",
       "helmet": "^3.12.0",
+      "morgan": "^1.10.0",
       "nodemon": "^1.17.2",
       "winston": "^2.4.1"
     }
@@ -140,6 +141,12 @@ Lockfile:
       isobject "^3.0.1"
       mixin-deep "^1.2.0"
       pascalcase "^0.1.1"
+  
+  basic-auth@~2.0.1:
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-2.0.1.tgz#b998279bf47ce38344b4f3cf916d4679bbf51e3a"
+    dependencies:
+      safe-buffer "5.1.2"
   
   binary-extensions@^1.0.0:
     version "1.13.1"
@@ -419,7 +426,7 @@ Lockfile:
       is-descriptor "^1.0.2"
       isobject "^3.0.1"
   
-  depd@2.0.0:
+  depd@2.0.0, depd@~2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/depd/-/depd-2.0.0.tgz#b696163cc757560d09cf22cc8fad1571b79e76df"
   
@@ -1048,6 +1055,16 @@ Lockfile:
       for-in "^1.0.2"
       is-extendable "^1.0.1"
   
+  morgan@^1.10.0:
+    version "1.10.0"
+    resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.10.0.tgz#091778abc1fc47cd3509824653dae1faab6b17d7"
+    dependencies:
+      basic-auth "~2.0.1"
+      debug "2.6.9"
+      depd "~2.0.0"
+      on-finished "~2.3.0"
+      on-headers "~1.0.2"
+  
   ms@2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -1154,6 +1171,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
     dependencies:
       ee-first "1.1.1"
+  
+  on-headers@~1.0.2:
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.2.tgz#772b0ae6aaa525c399e489adfad90c403eb3c28f"
   
   p-finally@^1.0.0:
     version "1.0.0"
